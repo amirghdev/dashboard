@@ -1,0 +1,32 @@
+{
+  "name": "api",
+  "version": "2.0.0",
+  "description": "api for vue application",
+  "main": "app.js",
+  "scripts": {
+    "start" : "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^3.1.0",
+    "bcryptjs": "^2.4.3",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "formidable": "^3.5.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.1",
+    "mysql2": "^3.3.0",
+    "nodemailer": "^6.9.4",
+    "nodemailer-smtp-transport": "^2.4.2",
+    "sequelize": "^6.31.1",
+    "sharp": "^0.32.4",
+    "shortid": "^2.2.16",
+    "uuid": "^9.0.1",
+    "yup": "^1.1.1"
+  }
+}

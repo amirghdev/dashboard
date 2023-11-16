@@ -1,0 +1,346 @@
+@font-face {
+  font-family: "vazir";
+  src: url("../../public/fonts/Vazir.eot");
+  src: url("../../public/fonts/Vazir.ttf") format("truetype"), url("../../public/fonts/Vazir.woff2") format("woff2"),
+    url("../../public/fonts/Vazir.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --light: #f9f9f9;
+  --blue: #3c91e6;
+  --light-blue: #cfe8ff;
+  --item: #dde6ed;
+  /* --border: var(--grey); */
+  --grey: #eee;
+  --dark-grey: #aaaaaa;
+  --dark: #342e37;
+  --red: #db504a;
+  --yellow: #ffce26;
+  --light-yellow: #fff2c6;
+  --orange: #fd7238;
+  --light-orange: #ffe0d3;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body.dark {
+  /* --light: #0c0c1e; */
+  --light: #242424;
+  /* --grey: #060714; */
+  --grey: #1a1a1a;
+  --dark: #fbfbfb;
+  --item: #212025;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+li {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+/* general styles */
+
+#app {
+  overflow-x: hidden;
+  font-family: "vazir" !important;
+  text-align: right;
+  background-color: var(--grey);
+  color: var(--dark);
+  min-height: 100vh;
+  position: relative;
+  transition: all 300ms ease-in-out;
+}
+
+#home {
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 100vh;
+}
+
+.Vue-Toastification__toast-body {
+  font-family: "vazir";
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+.vpd-icon-btn {
+  margin-bottom: 0;
+}
+
+button,
+input,
+textarea {
+  font-family: "vazir";
+  text-align: right;
+}
+
+textarea {
+  resize: none !important;
+}
+
+section {
+  text-align: right;
+}
+
+button a {
+  text-decoration: none !important;
+  color: var(--dark);
+}
+
+button a:hover {
+  color: var(--dark);
+}
+
+button {
+  color: var(--dark) !important;
+}
+
+a {
+  transition: all 300ms ease;
+}
+
+a:hover {
+  color: unset;
+}
+
+.item svg {
+  color: var(--dark);
+}
+
+.noBorder {
+  border-radius: 0 !important;
+}
+
+select {
+  text-align: right;
+}
+
+/* articles style */
+
+article {
+  text-align: right !important;
+}
+
+.create {
+  background-color: var(--light);
+  color: var(--dark);
+  border-radius: 7px;
+  padding: 20px;
+  transition: all 300ms ease-in-out;
+  overflow: scroll;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  /* background-color: var(--item); */
+  border-bottom: 1px solid rgba(206, 206, 206, 0.5);
+  padding: 15px 0px;
+  transition: background 300ms ease-in-out;
+}
+
+.item-text {
+  width: 70%;
+  text-align: right;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: scroll;
+}
+
+.item-control {
+  width: 30%;
+  text-align: left;
+}
+
+.item-control button {
+  /* opacity: 0; */
+  transition: all 300ms ease-in-out;
+  background-color: transparent;
+}
+
+.item:hover .item-control button {
+  opacity: 100;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.item-btn {
+  border: none;
+}
+
+.item-btn svg {
+  font-size: 20px;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+/* bookmark styles */
+
+body.dark .bookmark-item {
+  background-color: #1a1a1a;
+}
+
+body.dark .bookmark-item p {
+  color: #cecece;
+}
+
+body.dark .bookmark-control button svg {
+  color: rgba(206, 206, 206, 0.5);
+}
+
+.bookmark-item {
+  background-color: rgba(206, 206, 206, 0.8);
+  padding: 10px;
+  border-radius: 7px;
+  color: black;
+  transition: all 300ms ease-in-out;
+  margin: 15px;
+  width: calc(calc(100% / 5) - 30px);
+}
+
+.bookmark-item:hover {
+  background-color: rgba(206, 206, 206, 1);
+}
+
+.bookmark-image img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.bookmark-text {
+  margin: 7px 0;
+  cursor: pointer;
+}
+
+.bookmark-control {
+  display: flex;
+  justify-content: space-around;
+  z-index: 1000;
+}
+
+.category .bookmark-text {
+  height: 80%;
+}
+
+.bookmark-control button {
+  background-color: transparent;
+  border: none;
+  pointer-events: visible;
+  z-index: 10000;
+}
+
+.bookmark-control button svg {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* End of bookmark styles */
+
+/* media sections */
+
+@media (max-width: 1200px) {
+  .bookmark-item {
+    width: calc(calc(100% / 4) - 30px);
+  }
+}
+
+@media (max-width: 992px) {
+  /* #app {
+	  background-image: url("/src/public/image/background/mobile.jpg") !important;
+	  background-image: url("/images/mobile.jpg") !important;
+	} */
+
+  .info {
+    width: 100%;
+    top: 100px;
+    bottom: unset;
+    right: 0px;
+    border-radius: 0;
+  }
+
+  .item-control button {
+    opacity: 1;
+    transition: all 400ms ease-in-out;
+    background-color: unset;
+  }
+
+  .item:hover .item-control button {
+    opacity: unset;
+  }
+
+  .bookmark-item {
+    width: calc(calc(100% / 3) - 30px);
+  }
+}
+
+@media (max-width: 768px) {
+  .bookmark-item {
+    width: calc(calc(100% / 2) - 30px);
+  }
+}
+
+@media (max-width: 578px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .create {
+    border-radius: 0;
+    padding: 10px;
+  }
+
+  #home {
+    padding: 0;
+  }
+
+  .item {
+    padding: 10px 5px;
+  }
+
+  .bookmark-item {
+    width: calc(100% - 30px);
+  }
+}
