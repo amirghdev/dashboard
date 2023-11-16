@@ -14,11 +14,18 @@ npm run serve
 ```
 npm run build
 ```
+you need to add config.env in config folder of server and add these below
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+PORT = 
+DB_USERNAME = 
+DB_PASSWORD = 
+DB_NAME = 
+DB_HOST = 
+JWT_SECRET = 
+MAIL_HOST = 
+MAIL_USER = 
+MAIL_PASSWORD = 
+MAIN_EMAIL = 
+NODE_ENV= development
+DEV_LINK = 
+PRO_LINK = 
